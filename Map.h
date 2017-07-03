@@ -12,9 +12,11 @@ class Map
     Mapinfo **pMap; 
  public:
  	Map(int nCol, int nRow);
-	int **getMap();
-	int setMap(Block *pBlock);
+	Mapinfo **getMap();	
+	void setMap(Block *pBlock);
 	//check if map include complete lines.
-	int checkLine();
+	//fail -> -1, succeed -> number of lines
+	int checkLines();
+	void deleteLine();
 	~Map();
 };
